@@ -6,3 +6,7 @@
 
 // // Fundamentalsa
 
+function getAge(inputString) {  
+    // Берем первый символ строки и преобразуем в целое число  
+    return parseInt(inputString[0], 10);  
+} 
