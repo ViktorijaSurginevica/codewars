@@ -13,5 +13,5 @@
 
 
 const stringToNumber = function(str) {  
-    return Number(str); // Convert the string to a number  
+    return Number(str);
 };  
