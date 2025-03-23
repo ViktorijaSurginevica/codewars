@@ -38,6 +38,24 @@ const data = {
     this.course.lessons.push(newLesson); //
     this.render();
   },
+
+  updateLessonStatus(lessonId) {
+    const lesson = this.course.lessons.find((l) => l.id === lessonId);
+    lesson.isDone = !lesson.isDone;
+    this.render();
+  },
+
+  updateLessonTitle(lessonId, newTitle) {
+    const lesson = this.course.lessons.find((l) => l.id === lessonId);
+    lesson.title = newTitle;
+    this.render();
+  },
 };
 
 data.render();
+
+
+// консольное приложение для работы со списком  = модель
+
+
+
