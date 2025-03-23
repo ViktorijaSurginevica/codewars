@@ -17,10 +17,19 @@ const data = {
   render() {
     console.log(this.course); // команда для вывода курса
   },
+
+  // методы, которые будут работать с нашими данными
+
+  deleteLesson(lessonId) {
+    this.course.lessons = this.course.lessons.filter((l) => l.id !== lessonId); // в новый массив мы будем брать l.id который не равен lessonId
+    this.render();
+  },
+
+  addLesson(lessonId) {
+    const newLesson = {};
+    this.course.lessons.push(newLesson); //
+    this.render();
+  },
 };
 
-// методы, которые будут работать с нашими данными
-
-deleteLesson(lessonId){
-
-}
+data.render();
