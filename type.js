@@ -7,11 +7,15 @@ const data = {
     // Данные нужны для отображения нашего курса
     title: "Основы Fron-end разработки",
     lessons: [
-      { id: crypto.randomUUID, title: "Введение в JavaScript", isDone: true },
-      { id: crypto.randomUUID, title: "Операторы, сравнение, ветвление", isDone: false },
-      { id: crypto.randomUUID, title: "Функции", isDone: false },
-      { id: crypto.randomUUID, title: "Массивы", isDone: false },
-      { id: crypto.randomUUID, title: "Объекты", isDone: false },
+      { id: crypto.randomUUID(), title: "Введение в JavaScript", isDone: true },
+      {
+        id: crypto.randomUUID(),
+        title: "Операторы, сравнение, ветвление",
+        isDone: false,
+      },
+      { id: crypto.randomUUID(), title: "Функции", isDone: false },
+      { id: crypto.randomUUID(), title: "Массивы", isDone: false },
+      { id: crypto.randomUUID(), title: "Объекты", isDone: false },
     ],
   },
   render() {
@@ -26,7 +30,11 @@ const data = {
   },
 
   addLesson(lessonTitle) {
-    const newLesson = { id: 6, title: lessonTitle, isDone: false };
+    const newLesson = {
+      id: crypto.randomUUID(),
+      title: lessonTitle,
+      isDone: false,
+    };
     this.course.lessons.push(newLesson); //
     this.render();
   },
