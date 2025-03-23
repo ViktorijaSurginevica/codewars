@@ -57,5 +57,11 @@ data.render();
 
 // консольное приложение для работы со списком  = модель
 
+function CourseUI (course) {
 
+const courseElement = document.createElement("div")
+courseElement.classList.add("course")
+
+
+}
 
