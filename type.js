@@ -54,14 +54,34 @@ const data = {
 
 data.render();
 
-
 // консольное приложение для работы со списком  = модель
 
-function CourseUI (course) {
+function CourseUI(course) {
+  const courseElement = document.createElement("div");
+  courseElement.classList.add("course");
 
-const courseElement = document.createElement("div")
-courseElement.classList.add("course")
+  const corseTitleElement = document.createElement("h1");
+  courseTitleElement.classList.add("title");
+  courseTitleElement.textContent = course.title;
+
+  const corseListElement = document.createElement("ol");
+  courseListElement.classList.add("list");
+
+  const lessons = course.lessons;
+
+  for (let i = 0; i < lessons.length; i++) {
+    const lessonElement = document.createDocumentFragment("li");
+    lessonElement.classList.add("item");
+    lessonElement.textContent = lessons[i].title;
+    courseListElement.append(lessonElement);
+  }
+
+  courseElement.append(courseTitleElement)
+    courseElement.append(courseListElement)
+
+
+    return courseElement
+
 
 
 }
-
